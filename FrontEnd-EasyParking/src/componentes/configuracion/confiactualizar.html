@@ -1,0 +1,326 @@
+<div>
+
+  <body>
+    <div class="page-header pt-3 d-flex justify-content">
+      <h3><i class="fa-solid fa-list fa-fw"></i> Modificar configuracion</h3>
+    
+      <div class="col-sm-1 col-xs-1 col-md-1 col-lg-5"></div>
+      <a href="#confiadmin" class="card-footer text-muted col-3">
+        <button class="w-100 btn btn-primary btn-lg btn-block mb-2" type="submit">
+          <i class="fa-solid fa-unlock-keyhole fa-fw"></i> Cancelar Modificar
+        </button>
+      </a>
+  </div>
+    <div>
+      <form action="javascript:actualizarConfi();" id="formaConfiActualizar" class="validarFormulario" novalidate>
+        <div class="card justify-content-center">
+          <div class="card-header">
+            <h4>Configuración facturas</h4>
+          </div>
+          <div class="d-flex justify-content gap-2">
+            <div class="col-1 mr-2 mt-4 padding: 50">
+              <img src="src/assets/images/factura.png" alt="Avatar"><br>
+              <span id="idplazascarro"></span>
+            </div>
+            <div>
+              <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                <thead>
+                  <tr class="table-primary text-center mb-0 mt-0">
+                    <th style="width: 100%;">Nombre Parqueadero</th><br>
+                  </tr>
+                </thead>
+                <td>
+                  <input type="text" class="form-control formulario__input text-center" id="tablaConfinombrepark"
+                    required />
+                  <div class="invalid-feedback">Nombre requerido</div>
+                </td>
+              </table>
+            </div>
+            <div>
+              <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                <thead>
+                  <tr class="table-primary text-center mb-0 mt-0">
+                    <th style="width: 100%;">Prefijo Facturación</th><br>
+                  </tr>
+                </thead>
+                <td>
+                  <input type="text" class="form-control formulario__input text-center" id="tablaConfiprefijo"
+                    required />
+                  <div class="invalid-feedback">Prefijo Requerdio</div>
+                </td>
+              </table>
+            </div>
+            <div>
+              <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                <thead>
+                  <tr class="table-primary text-center mb-0 mt-0">
+                    <th style="width: 100%;">Numeración desde</th><br>
+                  </tr>
+                </thead>
+                <td>
+                  <input type="text" class="form-control formulario__input text-center" id="tablaConfidesde" required />
+                  <div class="invalid-feedback">Dato inicial requerido</div>
+                </td>
+              </table>
+            </div>
+            <div>
+              <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                <thead>
+                  <tr class="table-primary text-center mb-0 mt-0">
+                    <th style="width: 100%;">Numeracion hasta</th><br>
+                  </tr>
+                </thead>
+                <td>
+                  <input type="text" class="form-control formulario__input text-center" id="tablaConfihasta" required />
+                  <div class="invalid-feedback">Dato final requerido</div>
+                </td>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="card justify-content-center">
+            <div class="card-header">
+              <h4>Configuración Carros</h4>
+            </div>
+            <div class="d-flex justify-content-center gap-2">
+              <div class="col-1 mr-2 mt-4">
+                <img src="src/assets/images/carro.png" alt="Avatar"><br>
+                <span id="idplazascarro"></span>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Plazas</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConficarroplazas"
+                      required />
+                    <div class="invalid-feedback">plazas requerida</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Fracción</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConficarrofrac"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Hora</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConficarrohora"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Dia</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConficarrodia"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Semana</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConficarrosemana"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Mes</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConficarromes"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card justify-content-center">
+            <div class="card-header">
+              <h4>Configuración Motos</h4>
+            </div>
+            <div class="d-flex justify-content-center gap-2">
+              <div class="col-1 mr-2 mt-4">
+                <img src="src/assets/images/moto.png" alt="Avatar"><br>
+                <span id="idplazasmoto"></span>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Plazas</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConfimotoplazas"
+                      required />
+                    <div class="invalid-feedback">plazas requerida</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Fracción</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConfimotofrac"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Hora</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConfimotohora"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Dia</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConfimotodia"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Semana</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConfimotosemana"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+                </table>
+              </div>
+              <div>
+                <table class="table table-sm table-striped table-bordered mb-0 mt-0">
+                  <thead>
+                    <tr class="table-primary text-center mb-0 mt-0">
+                      <th style="width: 100%;">Valor Mes</th><br>
+                    </tr>
+                  </thead>
+                  <td>
+                    <input type="text" class="form-control formulario__input text-center" id="tablaConfimotomes"
+                      required />
+                    <div class="invalid-feedback">valor requerido</div>
+                  </td>
+
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="d-flex justify-content-center">
+            <div>
+            <a href='#confiadmin/' class="card-footer text-muted col-3 mb-1 mt-1 ">
+              <button class="w-100 btn btn-primary btn-lg btn-block mb-1 mt-1" type="submit">
+                Actualizar Configuración
+              </button>
+            </a>
+          </div>  
+          <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
+          
+          </div>
+          
+          <div class="d-flex justify-content-center">
+            <div class="col-md-6 mt-4">
+              <div class="alert alert-primary alert-dismissible fade show" role="alert" id="confiMsgOk1"
+                style="display: none">
+                La configuracion <strong>fue actualizada</strong> correctamente
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+              <div class="alert alert-danger alert-dismissible fade show" role="alert" id="confiMsgError1"
+                style="display: none">
+                La configuracion <strong>NO fue actualizada</strong> en la base de datos
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </body>
+</div>
+
+
+
+<body>
+
+  <form action="javascript:actualizarConfi();" id="formaConfiActualizar" class="validarFormulario" novalidate>
+    
+    <input type="hidden"  id="codi" required />
+
+
+     
+
+
+     

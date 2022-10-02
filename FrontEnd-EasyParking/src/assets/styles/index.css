@@ -1,0 +1,57 @@
+.resaltar:hover {
+  color: #b63b4b;
+  border: 2px solid #b63b4b;
+}
+
+.check-amarillo {
+  color: #fed93e;
+}
+
+.check-rojo {
+  color: #82140e;
+}
+
+.check-verde {
+  color: #1d7612;
+}
+.check-azul {
+  color: #590bc6;
+}
+
+
+.form-acceso input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-acceso input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.custom-file-control,
+.form-control,
+.is-focused .custom-file-control,
+.is-focused .form-control {
+  background-image: linear-gradient(0deg, #f0bdc1 2px, rgba(0, 150, 136, 0) 0),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.26) 1px, transparent 0);
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}

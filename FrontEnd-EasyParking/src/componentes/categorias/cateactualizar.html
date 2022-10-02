@@ -1,0 +1,142 @@
+<div class="page-header pt-3">
+  <h3><i class="fas fa-plus fa-fw"></i> Actualizar categoría</h3>
+</div>
+
+<div class="row col-md-12 mt-4">
+  <div class="d-flex justify-content-center">
+    <ul class="list-group list-group-horizontal-sm">
+      <a href="#cateadd" style="text-decoration: none">
+        <li class="list-group-item">
+          <i class="fas fa-plus fa-fw"></i> Agregar
+        </li>
+      </a>
+      <a href="#catelist" style="text-decoration: none">
+        <li class="list-group-item">
+          <i class="fa-solid fa-list fa-fw"></i> Lista
+        </li>
+      </a>
+      <a href="#cateadmin" style="text-decoration: none">
+        <li class="list-group-item active">
+          <i class="fa-solid fa-unlock-keyhole fa-fw"></i> Administrar
+        </li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="mt-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">* Datos requeridos</h5>
+        <div class="d-flex justify-content-center">
+          <div class="col-md-5">
+            <div class="mt-4">
+              <form           action="javascript:actualizarCate();"
+                id="formaCateActualizar"
+                class="validarFormulario"
+                novalidate
+              >
+                <input type="hidden" form-control" id="cod" required />
+                <h4>Formulario de creacion de Personas</h4>
+                <div class="col-md-8 mt-4">
+                  <div class="card-footer text-muted">
+                <div class="card-body">
+                    <div class="col-md-12">
+                        <label for="nom" class="form-label">Nombre(s)<span class="check-rojo">*</span>:</label>
+                        <input type="text" class="form-control formulario__input" id="nom" required pattern="[a-zA-Z0-9-]+" />
+                        <div class="invalid-feedback">Nombre requerido</div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="nom" class="form-label">Apellido(s)<span class="check-rojo">*</span>:</label>
+                        <input type="text" class="form-control formulario__input" id="apell" required pattern="[a-zA-Z0-9-]+" />
+                        <div class="invalid-feedback">Apellido requerido</div>
+                    </div>
+                    <div class="col-md-12">
+                            <label for="nom" class="form-label">Tipo de Documento<span class="check-rojo">*</span>:</label>
+                            <select class="ui-state-hover form-select" id="tdoc" required>
+                            <option value="" selected>Seleccione...</option>
+                            <option value="AN">Acta de nacimiento</option>
+                            <option value="CNZ">Carta de naturaleza</option>
+                            <option value="CC">Cédula de ciudadania</option>
+                            <option value="CE">Cédula de extranjeria colombiana</option>
+                            <option value="DE">Cédula extranjera</option>
+                            <option value="OE">Documento extranjero</option>
+                            <option value="PA">Pasaporte</option>
+                            <option value="RNA">Res. nacionalidad por adopción</option>
+                            <option value="DNRC">Resolucion DNRC</option>
+                            <option value="TI">Tarjeta de identidad</option>
+                        </select>
+                      <div class="invalid-feedback">Debe seleccionar un tipo de documento</div>
+                      </div>
+                
+                    
+                      <div class="col-md-12">
+                            <label for="nom" class="form-label">Documento<span class="check-rojo">*</span>:</label>
+                            <input type="text" class="form-control formulario__input" id="ndoc" required />
+                      <div class="invalid-feedback">Solo numeros y letras</div>
+                      </div>
+                      
+                      <div class="col-md-12">
+                            <label for="nom" class="form-label">Direccion<span class="check-rojo">*</span>:</label>
+                            <input type="text" class="form-control formulario__input" id="dire" required />
+                            <div class="invalid-feedback">Solo numeros letras y simbolos</div>
+                      </div>
+                      
+                      <div class="col-md-12">
+                            <label for="nom" class="form-label">Teléfono<span class="check-rojo">*</span>:</label>
+                            <input type="text" class="form-control formulario__input" id="tele" required />
+                            <div class="invalid-feedback">Campo requerido puede ser texto</div>
+                      </div>
+                    
+                      <div class="col-md-12">
+                          <label for="nom" class="form-label">Correo Electrónico<span class="check-rojo">*</span>:</label>
+                          <input type="text" class="form-control formulario__input" id="email" required />
+                          <div class="invalid-feedback">Debe ser un correo válido</div>
+                      </div>
+                
+                      <br>
+                          <button type="submit" class="btn btn-primary">Actualizar  persona</button>
+                      </div>
+                    </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="col-md-6 mt-4">
+      <div
+        class="alert alert-primary alert-dismissible fade show"
+        role="alert"
+        id="cateMsgOk1"
+        style="display: none"
+      >
+        La persona <strong>fue actualizada</strong> correctamente
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        role="alert"
+        id="cateMsgError1"
+        style="display: none"
+      >
+        La persona <strong>NO fue actualizada</strong> en la base de datos
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+  </div>
+</div>
