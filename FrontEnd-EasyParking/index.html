@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Easy Parking</title>
+    <link rel="icon" type="image/x-icon" href="src/assets/images/otroicon.ico">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="src/assets/styles/index.css">
+    <link rel="stylesheet" href="src/assets/styles/sidebars.css">
+    <link rel="stylesheet" href="src/assets/styles/actualizar.css">
+
+    <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="loadSidebar()">
+
+    <div class="d-flex flex-sm-nowrap" style="background-color: #f5f5f5;">
+        <div id="idMenuLateral"></div>
+
+        <div class="w-100 p-3">
+            <div class="px-3">
+                <div class="pt-2">
+                    <div style="border-bottom: 1px solid #c4c0c0;height: 40px;">
+                        <div class="row g-0">
+                            <div class="col-sm-6 col-md-8">
+                                <a href="/#home" data-bs-target="#sidebar" data-bs-toggle="collapse" style="color: #bf2525;
+                            transition: all .2s ease-out;">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </a>
+                            </div>
+                            <div class="col-6 col-md-4 text-end">
+                                <a href="/#login" style="color: #000000;"><i class="fas fa-user-cog"></i></a>
+                                <a href="/#login" class="btn-exit-system" style="color: #000000;">
+                                    <i class="fas fa-power-off"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Area de trabajo para el ruteo -->
+                    <div id="idRuteo"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Javascripts obligatorios -->
+    <script src="node_modules/routing/route.js"></script>
+    <script src="node_modules/routing/router.js"></script>
+    <script src="src/rutas/ruteo.js"></script>
+    <script src="node_modules/loadmenu/sidebar.js"></script>
+    <script src="src/assets/js/toggleSidebar.js"></script>
+    <script src="src/assets/js/logica.js"></script>
+
+
+    <!-- Javascripts developers -->
+
+    <!-- Bloque para personas -->
+    <script src="src/assets/js/categorias/cateListar.js"></script>
+    <script src="src/assets/js/categorias/cateAdmin.js"></script>
+    <script src="src/assets/js/categorias/cateCrear.js"></script>
+    <script src="src/assets/js/categorias/cateBorrar.js"></script>
+    <script src="src/assets/js/categorias/cateCargarUna.js"></script>
+    <script src="src/assets/js/categorias/cateActualizar.js"></script>
+
+    <!-- Bloque para plazas -->
+    <script src="src/assets/js/Plazas/plazListar.js"></script>
+
+    <!-- Bloque para Usuarios -->
+    <script src="src/assets/js/Usuarios/usuListar.js"></script>
+    <script src="src/assets/js/Usuarios/usuAdmin.js"></script>
+    <script src="src/assets/js/Usuarios/usuCrear.js"></script>
+    <script src="src/assets/js/Usuarios/usuBorrar.js"></script>
+    <script src="src/assets/js/Usuarios/usuCargarUna.js"></script>
+    <script src="src/assets/js/Usuarios/usuActualizar.js"></script>
+    <!-- Bloque para configuraciones -->
+    <script src="src/assets/js/configuracion/confiListar.js"></script>
+    <script src="src/assets/js/configuracion/confiAdmin.js"></script>
+    <script src="src/assets/js/configuracion/confiCargarUna.js"></script>
+    <script src="src/assets/js/configuracion/confiActualizar.js"></script>
+    <script src="src/assets/js/configuracion/confiCrearPlazas.js"></script>
+    <script src="src/assets/js/configuracion/confiCrearFacturas.js"></script>
+    <!-- Bloque para inicio -->
+    <script src="src/assets/js/login/login.js"></script>
+
+    <!-- Bloque para registrar -->
+    <script src="src/assets/js/registrovehiculos/registrar.js"></script>
+    <script src="src/assets/js/registrovehiculos/regislist.js"></script>
+    <!-- Bloque para inicio -->
+    <script src="src/assets/js/inicio/inicio.js"></script>
+    
+</body>
+
+</html>

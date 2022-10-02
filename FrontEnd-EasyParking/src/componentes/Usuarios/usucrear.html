@@ -1,0 +1,85 @@
+<div class="page-header pt-3">
+    <h3><i class="fas fa-plus fa-fw"></i> Agregar usuario</h3>
+</div>
+
+<div class="row col-md-12 mt-4">
+    <div class="d-flex justify-content-center">
+        <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item active"><i class="fas fa-plus fa-fw"></i> Agregar</li>
+            <a href="#usulist" style="text-decoration: none;">
+                <li class="list-group-item"><i class="fa-solid fa-list fa-fw"></i> Lista</li>
+            </a>
+            <a href="#usuadmin" style="text-decoration: none;">
+                <li class="list-group-item"><i class="fa-solid fa-unlock-keyhole fa-fw"></i> Administrar</li>
+            </a>
+        </ul>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+
+                <form action="javascript:crearUsu();" id="formaUsuCrear" class="validarFormulario" novalidate>
+                    <div class="card">
+                        <div class="card-footer text-muted">
+                            <h4>Formulario de creacion de Usuarios</h4>
+                            <div class="col-md-12 mt-4">
+                                <div class="card-body">
+                                    <div class="col-md-12">
+                                        <label for="nom" class="form-label">Usuario<span
+                                                class="check-rojo">*</span>:</label>
+                                        <input type="text" class="form-control formulario__input" id="usu" required
+                                            pattern="[a-zA-Z0-9-]+" />
+                                        <div class="invalid-feedback">Nombre requerido</div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="nom" class="form-label">Clave<span
+                                                class="check-rojo">*</span>:</label>
+                                        <input type="text" class="form-control formulario__input" id="cla" required
+                                            pattern="[a-zA-Z0-9-]+" />
+                                        <div class="invalid-feedback">Clave requerido</div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="nom" class="form-label">Rol<span
+                                                class="check-rojo">*</span>:</label>
+                                        <input type="text" class="form-control formulario__input" id="rol" required />
+                                        <div class="invalid-feedback">Solo numeros y letras</div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="nom" class="form-label">Persona<span
+                                                class="check-rojo">*</span>:</label>
+                                        <input type="text" class="form-control formulario__input" id="idper" required />
+                                        <div class="invalid-feedback">Campo requerido</div>
+                                    </div>
+                                    <br />
+                                    <button type="submit" class="btn btn-primary">Crear usuario</button>
+                                </div>
+                            </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+
+        <div class="col-md-6 mt-4">
+            <div class="alert alert-primary alert-dismissible fade show" role="alert" id="usuMsgOk"
+                style="display: none;">
+                El usuario <strong>fue creado</strong> correctamente
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="usuMsgError"
+                style="display: none;">
+                El usuario <strong>NO fue creado</strong> en la base de datos
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+        </div>
+
+    </div>
+</div>

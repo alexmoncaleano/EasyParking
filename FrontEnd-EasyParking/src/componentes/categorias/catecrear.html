@@ -1,0 +1,119 @@
+<div class="page-header pt-3">
+    <h3><i class="fas fa-plus fa-fw"></i> Agregar persona</h3>
+</div>
+
+<div class="margin:0px auto row col-md-12 mt-4 ">
+    <div class="d-flex justify-content-center">
+        <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item active"><i class="fas fa-plus fa-fw"></i> Agregar</li>
+            <a href="#catelist" style="text-decoration: none;">
+                <li class="list-group-item"><i class="fa-solid fa-list fa-fw"></i> Lista</li>
+            </a>
+            <a href="#cateadmin" style="text-decoration: none;">
+                <li class="list-group-item"><i class="fa-solid fa-unlock-keyhole fa-fw"></i> Administrar</li>
+            </a>
+        </ul>
+    </div>
+
+    
+    <div class="card animation">
+        <h3 class="d-flex justify-content-center" >Formulario de creacion de Clientes</h3>
+        <div class="d-flex justify-content-center gap-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-center">
+                    
+                            <form action="javascript:crearRol();" id="formaCateCrear" class="validarFormulario col-12">
+                                <div class="card-footer text-muted">
+                                <div class="col-12">
+                                    <div class="col-md-12 mt-12">
+                                    <div class="col-md-12">
+                                        <div class="col-md-12">
+                                            <label for="nom" class="form-label">Nombre(s)<span class="check-rojo">*</span>:</label>
+                                            <input type="text" class="form-control formulario__input" id="nom" required pattern="[a-zA-Z0-9-]+" />
+                                            <div class="invalid-feedback">Nombre requerido</div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="nom" class="form-label">Apellido(s)<span class="check-rojo">*</span>:</label>
+                                            <input type="text" class="form-control formulario__input" id="apell" required pattern="[a-zA-Z0-9-]+" />
+                                            <div class="invalid-feedback">Apellido requerido</div>
+                                        </div>
+                                        <div class="col-md-12">
+                                                <label for="nom" class="form-label">Tipo de Documento<span class="check-rojo">*</span>:</label>
+                                                <select class="ui-state-hover form-select" id="tdoc" required>
+                                                <option value="" selected>Seleccione...</option>
+                                                <option value="AN">Acta de nacimiento</option>
+                                                <option value="CNZ">Carta de naturaleza</option>
+                                                <option value="CC">Cédula de ciudadania</option>
+                                                <option value="CE">Cédula de extranjeria colombiana</option>
+                                                <option value="DE">Cédula extranjera</option>
+                                                <option value="OE">Documento extranjero</option>
+                                                <option value="PA">Pasaporte</option>
+                                                <option value="RNA">Res. nacionalidad por adopción</option>
+                                                <option value="DNRC">Resolucion DNRC</option>
+                                                <option value="TI">Tarjeta de identidad</option>
+                                            </select>
+                                            <div class="invalid-feedback">Debe seleccionar un tipo de documento</div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col-md-12">
+                                                <label for="nom" class="form-label">Documento<span class="check-rojo">*</span>:</label>
+                                                <input type="text" class="form-control formulario__input" id="ndoc" required />
+                                                <div class="invalid-feedback">Solo numeros y letras</div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                                <label for="nom" class="form-label">Direccion<span class="check-rojo">*</span>:</label>
+                                                <input type="text" class="form-control formulario__input" id="dire" required />
+                                        <div class="invalid-feedback">Solo numeros letras y simbolos</div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                                <label for="nom" class="form-label">Teléfono<span class="check-rojo">*</span>:</label>
+                                                <input type="text" class="form-control formulario__input" id="tele" required />
+                                                <div class="invalid-feedback">Campo requerido puede ser texto</div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <label for="nom" class="form-label">Correo Electrónico<span class="check-rojo">*</span>:</label>
+                                            <input type="text" class="form-control formulario__input" id="email" required />
+                                            <div class="invalid-feedback">Debe ser un correo válido</div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    </div>
+                                        <button type="submit" class="btn btn-primary">Crear persona</button>
+                                    </div>
+                                
+                                </div>
+                            </form>
+                </div>
+            </div>
+            <div class="card-body col-3">
+                <img class="animation" src="src/assets/images/Clientescarro.png" alt="Avatar"><br>
+                <span id="idplazascarro"></span>
+            </div>
+
+
+        </div>
+    
+    </div>
+    <div class="d-flex justify-content-center">
+
+        <div class="col-md-6 mt-4">
+            <div class="alert alert-primary alert-dismissible fade show" role="alert" id="cateMsgOk"
+                style="display: none;">
+                La persona <strong>fue creada</strong> correctamente
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="cateMsgError"
+                style="display: none;">
+                La persona <strong>NO fue creada</strong> en la base de datos
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
